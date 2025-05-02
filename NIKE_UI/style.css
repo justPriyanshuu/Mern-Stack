@@ -180,19 +180,57 @@
   align-items: center;
 }
 
-.footer-card{
-    color: white;
-    background-color: antiquewhite;
-    width: 18%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.footer-card {
+  color: white;
+  width: 18%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-card p {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.footer-subscribe {
+  height: 100%;
+  width: 28%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-subscribe h3,
+.footer-subscribe input,
+.footer-subscribe button {
+  margin-top: 1rem;
+}
+
+.footer-subscribe input {
+  border-radius: 5px;
+  background: none;
+  border: 1px solid white;
+  height: 1.5rem;
+  width: 15rem;
+}
+
+.footer-subscribe button {
+  width: 7rem;
+  height: 2rem;
+  color: black;
+  background-color: white;
+  text-align: center;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 .footer-tail {
   height: 10%;
-  background-color: #c4c7c8;
+  background-color: black;
 }
-
