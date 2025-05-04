@@ -15,4 +15,24 @@
     height: 55%;
     width: 30%;
     background-color: aliceblue;
+    padding:1rem;
 }
+
+.login{
+    text-align: center;
+    margin: 1.1rem;
+    font-size: 2rem;
+}
+
+.userpass{
+    margin: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.userpass input{
+    width: 20rem;
+    height: 1.6rem;
+}
+
