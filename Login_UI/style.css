@@ -25,6 +25,8 @@
   border: 1px solid whitesmoke;
   backdrop-filter: blur(10px);
   color: white;
+  color: white;
+  text-shadow: 1px 1px 2px #00000066;
 }
 
 .login {
@@ -49,6 +51,12 @@
   background-color: transparent;
 }
 
+.user-icon{
+  font-size: 0.8rem;
+  position: absolute;
+  right: 50px;
+}
+
 .userpass ::placeholder{
     color: whitesmoke;
     padding-left: 0.5rem;
@@ -63,7 +71,7 @@
 .remember-forgot {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   font-size: 0.8rem;
 }
 
