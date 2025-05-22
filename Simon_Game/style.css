@@ -1,0 +1,38 @@
+h1{
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+}
+
+.container{
+    height: auto;
+    width: 100vw;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container .box{
+    height: 120px;
+    width: 120px;
+    border: 5px solid black;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.one{
+    background-color: #f99b45;
+}
+.two{
+    background-color: #d95980;
+}
+.three{
+    background-color: #63aac0;
+}
+.four{
+    background-color: #819ff9;
+}
