@@ -22,6 +22,12 @@ function btnFlash(btn){
         btn.classList.remove("flash");
     },500);
 }
+function userFlash(btn){
+    btn.classList.add("userflash");
+    setTimeout(function(){
+        btn.classList.remove("userflash");
+    },500);
+}
 
 function levelUp(){
     level++;
@@ -32,4 +38,14 @@ function levelUp(){
     let randbtn=document.querySelector(`.${randColor}`);
 
     btnFlash(randbtn);
+}
+
+function btnPress(){
+    let btn=this;
+    userFlash(btn);
+}
+
+let allbtn=document.querySelectorAll(".box");
+for(btn of allbtn){
+    btn.addEventListener("click",btnPress)
 }
