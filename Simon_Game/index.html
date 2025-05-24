@@ -7,17 +7,38 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Simon Says Game</h1>
+    <h1>---Simon Game---</h1>
     <h4>Press Space to start the game</h4>
     <div class="container">
+      <div class="info">
+        <h3>🧠 How to Play the Simon Game</h3>
+        <p>
+          Repeat the sequence of colors as they light up!<br />
+          Each round, Simon adds one more color to the pattern.<br />
+          Click the colors in the same order <br>if you mess up, the game
+          resets.<br />
+          Try to see how long you can keep up!
+        </p>
+      </div>
       <div class="line1">
-        <div class="box one" type="button">1</div>
-        <div class="box three" type="button">3</div>
+        <div class="box one" type="button" id="one">1</div>
+        <div class="box three" type="button" id="three">3</div>
       </div>
       <div class="line2">
-        <div class="box two" type="button">2</div>
-        <div class="box four" type="button">4</div>
+        <div class="box two" type="button" id="two">2</div>
+        <div class="box four" type="button" id="four">4</div>
       </div>
+    </div>
+    <div
+      class="footer-message"
+      style="
+        color: white;
+        text-align: center;
+        font-size: 0.7rem;
+        margin-top: 2rem;
+      "
+    >
+      Made with ❤️ by Priyanshu
     </div>
     <script src="app.js"></script>
   </body>

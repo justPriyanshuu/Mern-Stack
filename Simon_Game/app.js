@@ -12,7 +12,7 @@ document.addEventListener("keypress",function(){
     if(started==false){
         console.log("Game started");
         started = true;
-        levelUp();
+        setTimeout(levelUp,1000);
     }
 });
 
@@ -30,19 +30,49 @@ function userFlash(btn){
 }
 
 function levelUp(){
+    userSeq=[];
     level++;
     h4.innerText=`Level ${level}`;
 
     let randIdx=Math.floor(Math.random()*3);
     let randColor=btns[randIdx];
     let randbtn=document.querySelector(`.${randColor}`);
-
+    gameSeq.push(randColor);
+    console.log(gameSeq);
     btnFlash(randbtn);
+}
+
+function checkAns(idx){
+    if(userSeq[idx]==gameSeq[idx]){
+        if(userSeq.length==gameSeq.length){
+            setTimeout(levelUp,1000);
+        }
+    }else{
+        h4.innerHTML=`Game Over! Your Score was <b>${level}</b> <br>Press any key`;
+        document.querySelector("body").style.backgroundColor="red";
+        setTimeout(function(){
+            document.querySelector("body").style.backgroundColor="black";
+        },200)
+        resetGame();
+    }
+}
+
+function resetGame(){
+    started=false;
+    gameSeq=[];
+    userSeq=[];
+    level=0;
 }
 
 function btnPress(){
     let btn=this;
     userFlash(btn);
+
+    userColor=btn.getAttribute("id");
+    userSeq.push(userColor);
+    console.log(userSeq);
+
+    checkAns(userSeq.length-1);
 }
 
 let allbtn=document.querySelectorAll(".box");
