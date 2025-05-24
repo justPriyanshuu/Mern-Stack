@@ -1,61 +1,140 @@
-body{
-    background-color: black;
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-h1{
-    text-align: center;
-    color: white;
+h1, h4 {
+  text-align: center;
+  color: white;
+  margin: 1rem 0 0.5rem;
 }
 
-h4{
-    text-align: center;
-    color: white;
+#start-btn {
+  display: none;
+  margin: 0 auto 1rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.container{
-    height: auto;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.info {
+  color: white;
+  font-size: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  line-height: 1.6;
+  max-width: 280px;
+  text-align: left;
+}
+
+.game-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line1, .line2 {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  height: 120px;
+  width: 120px;
+  border: 5px solid black;
+  margin: 1rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.box:active {
+  transform: scale(0.95);
+}
+
+.one { background-color: #f99b45; }
+.two { background-color: #d95980; }
+.three { background-color: #63aac0; }
+.four { background-color: #819ff9; }
+
+.flash {
+  background-color: whitesmoke;
+  box-shadow: 0 0 15px white;
+}
+
+.userflash {
+  background-color: rgb(102, 255, 91);
+  box-shadow: 0 0 15px white;
+}
+
+.footer-message {
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
     align-items: center;
+  }
+
+  .info {
     text-align: center;
+    max-width: 90%;
+  }
+
+  .box {
+    height: 90px;
+    width: 90px;
+    margin: 0.7rem;
+    font-size: 1.2rem;
+  }
+
+  h1, h4 {
+    font-size: 1.3rem;
+  }
+
+  #start-btn {
+    display: block;
+  }
 }
 
-.info{
-    color: white;
-    font-size: 1rem;
-    margin-left: -25rem;
-    margin-right: 1.5   rem;
-    
-}
+@media (min-width: 1200px) {
+  .box {
+    height: 140px;
+    width: 140px;
+  }
 
-.container .box{
-    height: 120px;
-    width: 120px;
-    border: 5px solid black;
-    margin: 1rem;
-    border-radius: 1rem;
-}
+  .info {
+    font-size: 1.1rem;
+  }
 
-.one{
-    background-color: #f99b45;
-}
-.two{
-    background-color: #d95980;
-}
-.three{
-    background-color: #63aac0;
-}
-.four{
-    background-color: #819ff9;
-}
-
-.flash{
-    background-color: whitesmoke;
-    box-shadow: rgb(255, 255, 255) 0px 0px 15px;
-}
-
-.userflash{
-    background-color: rgb(102, 255, 91);
-    box-shadow: rgb(255, 255, 255) 0px 0px 15px;
+  .container {
+    padding: 2rem;
+  }
 }
