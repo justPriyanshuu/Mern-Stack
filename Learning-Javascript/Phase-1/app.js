@@ -20,7 +20,7 @@ btn4.addEventListener("click", () => {
 });
 
 btn5.addEventListener("click", () => {
-  let idx = Math.floor(Math.random() * 7);
+  let idx = Math.floor(Math.random() * colors.length);
   let color = colors[idx];
   document.body.style.backgroundColor = color;
 });
