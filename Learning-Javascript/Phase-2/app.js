@@ -1,37 +1,48 @@
-let clock = document.getElementById("time");
+let Clock = document.getElementById("time");
 
 setInterval(() => {
   let time = new Date();
-  let hours = time.getHours();
-  let minutes = time.getMinutes();
-  let seconds = time.getSeconds();
 
-  let currentTime = `${hours}:${minutes}`;
+  let h = time.getHours();
+  let m = time.getMinutes();
+  let currentTime = `${h < 10 ? "0" + h : h}:${m < 10 ? "0" + m : m}`;
 
-  if (alarmTime === currentTime) {
-    alert("Alarm Ringing!");
+  if (alarmTime == currentTime) {
+    // alert("Alarm Ringing!");
+    alarmTime = null;
+
+    let clockColor = document.querySelector(".clock");
+    clockColor.classList.add("clock-red");
+
+    setTimeout(() => {
+      clockColor.classList.remove("clock-red");
+    }, 2000);
   }
 
+  let hour = time.getHours();
+  let minute = time.getMinutes();
+  let second = time.getSeconds();
   let period = "AM";
-  if (hours > 12) {
+
+  if (hour > 12) {
     period = "PM";
-    if (hours > 12) hours -= 12;
+    hour = hour - 12;
   }
-  if (hours == 0) hours = 12;
+  if (hour == 0) hour = 12;
+  if (hour < 10) hour = `0${hour}`;
+  if (minute < 10) minute = `0${minute}`;
+  if (second < 10) second = `0${second}`;
 
-  let h = hours < 10 ? "0" + hours : hours;
-  let m = minutes < 10 ? "0" + minutes : minutes;
-  let s = seconds < 10 ? "0" + seconds : seconds;
+  let clock = `${hour}:${minute}:${second} ${period}`;
 
-  let final = `${h}:${m}:${s} ${period}`;
-
-  clock.innerText = final;
+  Clock.innerText = clock;
 }, 1000);
 
-let alarminput = document.getElementById("alarm-time");
-let alarmbtn = document.getElementById("set-alarm");
-let alarmTime = 0;
+let alarmInput = document.getElementById("alarm-time");
+let setAlarm = document.getElementById("set-alarm");
+let alarmTime = null;
 
-alarmbtn.addEventListener("click", () => {
-  alarmTime = alarminput.value;
+setAlarm.addEventListener("click", () => {
+  alarmTime = alarmInput.value;
+  alarmInput.value = "";
 });
