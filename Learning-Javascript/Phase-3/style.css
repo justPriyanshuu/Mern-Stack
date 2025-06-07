@@ -1,42 +1,75 @@
-.main{
-    height:100vh;
-    width: 100%;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.main {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.todolist{
-    height: 25rem;
-    width: 45rem;
-    background-color: rgb(24, 23, 23);
-    text-align: center;
+.todolist {
+  height: 25rem;
+  width: 45rem;
+  background-color: rgb(24, 23, 23);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
 }
 
-.todolist h2{
-    color: white;
-    margin-top: 0.5rem;
+.todolist h2 {
+  color: white;
+  margin-top: 0.5rem;
 }
 
-.task-bar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem
+.task-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
-.todolist input{
-    width: 20rem;
-    border-radius: 15px;
-    margin-right: 1rem;
-    padding-left: 1rem;
+.todolist input {
+  width: 20rem;
+  border-radius: 15px;
+  margin-right: 1rem;
+  padding-left: 1rem;
 }
 
-.todolist button{
-    height: 1.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2rem;
+.todolist button {
+  height: 1.8rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
 }
+
+.task-list {
+  height: 65%;
+  padding: 2rem;
+  margin-top: 1rem;
+  /* border: 1px solid white; */
+  color: white;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: #333; */
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  color: white;
+  list-style: none;
+  gap: 1rem;
+}
+
+.check-task{
+    height: 1rem !important;
+    width: 1rem !important;
+    margin: 0 !important;
+}
+
