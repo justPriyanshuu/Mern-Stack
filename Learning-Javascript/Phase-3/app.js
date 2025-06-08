@@ -2,25 +2,22 @@ let addTask = document.querySelector(".enter-task");
 let addBtn = document.querySelector(".add-btn");
 let list = document.getElementById("taskLists");
 addBtn.addEventListener("click", () => {
-  let inputValue = addTask.value;
+  let inputValue = addTask.value.trim();
+  if(inputValue==="") return;
   // console.log(inputValue);
 
   let li = document.createElement("li");
   li.className = "task-item";
-  li.innerHTML = `<li class="task-item">
-              <input
+  li.innerHTML = `<input
                 class="form-check-input check-task"
                 type="checkbox"
-                id="check-default"
               />
               <label>
                 <span class="task-text">${inputValue}</span></label
               >
-              <button class="btn btn-sm btn-danger delete-btn">Delete</button>
-            </li>`;
+              <button class="btn btn-sm btn-danger delete-btn">Delete</button>`;
 
   list.appendChild(li);
-
 
   let checkbox = li.querySelector(".check-task");
   let taskText = li.querySelector(".task-text");
@@ -44,6 +41,6 @@ addBtn.addEventListener("click", () => {
 
 addTask.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
-    addBtn.click(); 
+    addBtn.click();
   }
 });
