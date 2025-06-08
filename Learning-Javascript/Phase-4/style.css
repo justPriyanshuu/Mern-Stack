@@ -20,6 +20,7 @@
   width: 300px;
 }
 .display {
+  height: 2rem;
   background: transparent;
   color: white;
   font-size: 2rem;
@@ -57,6 +58,6 @@ button:hover {
   color: white;
 }
 
-.zero{
-    grid-column: span 2;
+.zero {
+  grid-column: span 2;
 }
