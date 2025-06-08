@@ -39,8 +39,8 @@ addBtn.addEventListener("click", () => {
   addTask.value = "";
 });
 
-addTask.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
+addTask.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
     addBtn.click();
   }
 });
