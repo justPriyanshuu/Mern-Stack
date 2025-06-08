@@ -13,13 +13,14 @@ addBtn.addEventListener("click", () => {
                 type="checkbox"
                 id="check-default"
               />
-              <label for="check-default">
+              <label>
                 <span class="task-text">${inputValue}</span></label
               >
               <button class="btn btn-sm btn-danger delete-btn">Delete</button>
             </li>`;
 
   list.appendChild(li);
+
 
   let checkbox = li.querySelector(".check-task");
   let taskText = li.querySelector(".task-text");
@@ -39,4 +40,10 @@ addBtn.addEventListener("click", () => {
   });
 
   addTask.value = "";
+});
+
+addTask.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    addBtn.click(); 
+  }
 });

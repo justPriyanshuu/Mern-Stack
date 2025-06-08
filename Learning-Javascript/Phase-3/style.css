@@ -16,9 +16,7 @@
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
-  
-  overflow-y: auto;         
-  scrollbar-width: none;     
+  border-radius: 20px;   
 }
 
 .todolist h2 {
@@ -51,10 +49,12 @@
 
 .task-list {
   height: 65%;
-  padding: 2rem;
+  padding: 1rem 2rem;
   margin-top: 1rem;
   /* border: 1px solid white; */
   color: white;
+  overflow-y: auto;         
+  scrollbar-width: none;  
 }
 
 .task-item {
@@ -63,7 +63,7 @@
   justify-content: space-between;
   /* background-color: #333; */
   padding: 0.5rem 1rem;
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem; */
   border-radius: 10px;
   color: white;
   list-style: none;
