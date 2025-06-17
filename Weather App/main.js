@@ -9,7 +9,17 @@ frm.addEventListener("submit", async (e) => {
 
   try {
     const res = await axios.get(url);
-    console.log(res.data);
+    let description = res.data.weather[0].description;
+    let temprature = res.data.main.temp;
+
+    let result = document.querySelector("#result");
+    result.innerHTML = "";
+
+    let p = document.createElement("p");
+    p.textContent = `Weather: ${description}\n
+                  Temprature: ${temprature}°C`;
+
+    result.appendChild(p);
   } catch (e) {
     console.log(e);
   }
