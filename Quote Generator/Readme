@@ -1,0 +1,36 @@
+# ✨ Quote Generator
+
+A simple web app that fetches and displays a random inspirational quote using the Quotable API.
+
+## 🚀 Features
+
+- Fetches a new quote on button click
+- Displays quote and author
+- Author name is shown in bold
+- Clean and simple layout
+
+## 🛠 Tech Stack
+
+- HTML
+- CSS
+- JavaScript (ES6)
+- Axios for HTTP requests
+- [Quotable API](https://api.quotable.io)
+
+## 📦 Setup Instructions
+
+1. Clone or download this repository.
+2. Open `index.html` in your browser.
+3. Click the **"Generate Quote"** button to fetch a new quote.
+
+## 🔍 API Used
+
+**Endpoint**: `https://api.quotable.io/random`  
+**Sample Response**:
+
+```json
+{
+  "content": "Be yourself; everyone else is already taken.",
+  "author": "Oscar Wilde"
+}
+```
