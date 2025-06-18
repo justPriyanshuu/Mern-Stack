@@ -1,0 +1,42 @@
+# 🎬 Movie Search Bot
+
+A simple web app that fetches and displays movie details using the OMDb API.
+
+## 🚀 Features
+
+- Search for any movie by title
+- Displays poster, release year, genre, actors, and IMDb rating
+- Clean, responsive UI with card layout
+
+## 🛠️ Technologies Used
+
+- HTML5, CSS3 (Responsive styling)
+- JavaScript (ES6+)
+- Axios (for API requests)
+- OMDb API
+
+## 🔧 How It Works
+
+1. User enters a movie name and clicks "Search".
+2. The app sends a request to the OMDb API using Axios.
+3. The response is parsed, and a styled card with movie info is shown.
+
+## 📦 Setup Instructions
+
+1. Clone or download the repository.
+2. Open `index.html` in your browser.
+3. Make sure you have internet access to load Axios from CDN.
+
+## 🌐 API Used
+
+- [OMDb API](http://www.omdbapi.com/)
+
+## 🖼️ Sample Output
+
+```text
+Title: Interstellar
+Year: 2014
+Genre: Adventure, Drama, Sci-Fi
+Actors: Matthew McConaughey, Anne Hathaway, Jessica Chastain
+IMDb Rating: 8.6
+```
