@@ -7,14 +7,21 @@ btn.addEventListener("click", async () => {
   try {
     let result = await axios.get(url);
 
-    document.querySelector('.card').classList.remove('hidden');
-    document.querySelector('.avatar').src= result.data.avatar_url;
-    document.querySelector('.name').textContent = result.data.name;
-    document.querySelector('.bio').textContent = result.data.bio;
-    document.querySelector('.repos').textContent = result.data.public_repos;
-    document.querySelector('.followers').textContent = result.data.followers;
+    document.querySelector(".card").classList.remove("hidden");
+    document.querySelector(".error").classList.add("hidden");
 
+    document.querySelector(".avatar").src = result.data.avatar_url;
+    document.querySelector(".name").textContent = result.data.name;
+    document.querySelector(".bio").textContent = result.data.bio;
+    document.querySelector(".repos").textContent = result.data.public_repos;
+    document.querySelector(".followers").textContent = result.data.followers;
+
+    let link = result.data.html_url;
+    document.querySelector(".card").addEventListener("click", () => {
+      window.location.href = link;
+    });
   } catch (e) {
-    console.log(e);
+    document.querySelector(".card").classList.add("hidden");
+    document.querySelector(".error").classList.remove("hidden");
   }
 });
