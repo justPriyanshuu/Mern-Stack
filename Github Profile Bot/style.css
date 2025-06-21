@@ -33,6 +33,7 @@ h1 {
 
 .search-box input {
   padding: 10px;
+  padding-left: 1rem;
   width: 70%;
   border: 1px solid #ccc;
   border-radius: 6px;
