@@ -1,3 +1,5 @@
+// import axios from "axios";
+
 let btn = document.querySelector(".search");
 
 btn.addEventListener("click", async () => {
